@@ -8,7 +8,7 @@ export default ({ domain, top, left, right }) => {
         return (
             <SearchBar top={top} left={left} right={right} action="https://search.naver.com/search.naver">
                 <a href="https://www.naver.com"></a>
-                <input type="text" name="query" maxLength="255"></input>
+                <input autoComplete="off" type="text" name="query" maxLength="255"></input>
             </SearchBar>
         )
     return (
@@ -17,7 +17,7 @@ export default ({ domain, top, left, right }) => {
                 background: "url(static/search.png)", backgroundRepeat: "no-repeat",
                 backgroundPosition: "center"
             }} href="https://www.google.com"></a>
-            <input type="text" name="q" maxLength="255"></input>
+            <input autoComplete="off" type="text" name="q" maxLength="255"></input>
         </SearchBar>
     )
 }
@@ -32,6 +32,7 @@ const SearchBar = styled.form`
     right: ${props => props.right};
     box-shadow: 0 -3px 20px 0 rgba(0, 0, 0, 0.1);
     width: 40%;
+    border-radius: 8px;
     a {
         position: absolute;
         display: flex;
@@ -55,9 +56,10 @@ const SearchBar = styled.form`
         }
     }
     input {
+        outline: none;
         position: relative;
         display: flex;
-        width: calc(100%-48px);
+        width: calc(100% - 61px);
         height: 56px;
         border: 0;
         border-radius: 8px;

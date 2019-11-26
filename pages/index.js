@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import { SearchBar } from '../components';
+import { SearchBar, ToDo } from '../components';
 
 const Index = () => {
 
@@ -13,6 +13,7 @@ const Index = () => {
         </NaverSearchBar> */}
         <SearchBar top={"10%"} left={"5%"} domain='naver' />
         <SearchBar top={"10%"} right={"5%"} />
+        <ToDo></ToDo>
     </Background>)
 }
 
