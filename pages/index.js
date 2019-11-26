@@ -1,19 +1,14 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import { SearchBar, ToDo } from '../components';
-
+import { SearchBar, ToDo, Clock } from '../components';
 const Index = () => {
-
-    // 검색하고 뒤로가기 했을 때, 기록 남지 않게 하기
     var imgUrl = "static/backimg1.png";
+
     return (<Background imgUrl={imgUrl}>
-        {/* <NaverSearchBar action="https://search.naver.com/search.naver">
-            <a href="https://www.naver.com"></a>
-            <input type="text" name="query" maxLength="255"></input>
-        </NaverSearchBar> */}
         <SearchBar top={"10%"} left={"5%"} domain='naver' />
         <SearchBar top={"10%"} right={"5%"} />
         <ToDo></ToDo>
+        <Clock></Clock>
     </Background>)
 }
 
@@ -30,6 +25,5 @@ const Background = styled.div`
     background-image: url(${props => props.imgUrl});
     background-size: cover;
     position: relative;
-
 `
 

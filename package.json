@@ -8,8 +8,10 @@
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"dependencies": {
+		"analog-clock-react": "^1.1.0",
 		"next": "^9.1.3",
 		"react": "^16.11.0",
+		"react-clock": "^2.4.0",
 		"react-dom": "^16.11.0",
 		"reactjs-localstorage": "0.0.8",
 		"styled-components": "^4.4.1"
