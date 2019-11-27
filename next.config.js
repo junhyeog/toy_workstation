@@ -1,7 +1,8 @@
+const isProd = (process.env.NODE_ENV || 'production') === 'production'
+
 module.exports = {
-    exportPathMap: function () {
-        return {
-            '/': { page: '/' }
-        };
-    }
-};
+    exportPathMap: () => ({
+        '/': { page: '/' },
+    }),
+    assetPrefix: isProd ? '/toy_workstation' : '',
+}
