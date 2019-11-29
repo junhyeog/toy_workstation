@@ -3,7 +3,14 @@ import styled from 'styled-components';
 
 export default () => {
     const todos = React.useState([])
+    React.useEffect(() => {
+        todos[1](JSON.parse(localStorage.getItem('todos')));
+        console.log(todos[0])
+    }, [])
 
+    React.useEffect(() => {
+        localStorage.setItem('todos', JSON.stringify(todos[0]))
+    })
     return (<Background>
         <Header>
             할 일 목록
@@ -123,7 +130,6 @@ const Header = styled.div`
         text-align: left;
     }
 `
-
 const Background = styled.div`
     display: block;
     position: absolute;
