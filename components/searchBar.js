@@ -14,7 +14,7 @@ export default ({ domain, top, left, right }) => {
     return (
         <SearchBar top={top} left={left} right={right} action="https://www.google.com/search">
             <a style={{
-                background: "url(static/search.png)", backgroundRepeat: "no-repeat",
+                background: "url(/static/search.png)", backgroundRepeat: "no-repeat",
                 backgroundPosition: "center"
             }} href="https://www.google.com"></a>
             <input autoComplete="off" type="text" name="q" maxLength="255"></input>
@@ -39,7 +39,7 @@ const SearchBar = styled.form`
         top: 0;
         width: 48px;
         height: 56px;
-        background: url(static/naver.png);
+        background: url(/static/naver.png);
         background-repeat: no-repeat;
         background-position: center;
         font-size: 0;

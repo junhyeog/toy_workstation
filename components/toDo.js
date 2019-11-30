@@ -4,7 +4,8 @@ import styled from 'styled-components';
 export default () => {
     const todos = React.useState([])
     React.useEffect(() => {
-        todos[1](JSON.parse(localStorage.getItem('todos')));
+        if (JSON.parse(localStorage.getItem('todos')))
+            todos[1](JSON.parse(localStorage.getItem('todos')));
         console.log(todos[0])
     }, [])
 

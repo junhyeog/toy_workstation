@@ -8,7 +8,7 @@ const Layout = ({ Component }) => {
     <>
       <Head>
         <title>My Workstation</title>
-        <link rel="icon" type="image/x-icon" href="static/titleIcon.ico" />
+        <link rel="icon" type="image/x-icon" href="/static/titleIcon.ico" />
       </Head>
       <Component />
       <GlobalStyle />
