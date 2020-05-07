@@ -1,11 +1,8 @@
 import React from 'react';
-import ReactGA from 'react-ga';
 import Head from 'next/head';
 import { createGlobalStyle } from 'styled-components'
 
 const Layout = ({ Component }) => {
-  ReactGA.initialize('UA-165852651-1');
-  ReactGA.pageview(window.location.pathname + window.location.search);
   return (
     <>
       <Head>

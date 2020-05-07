@@ -1,6 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
+import ReactGA from 'react-ga';
 import { SearchBar, ToDo, Clock } from '../components';
 const Index = () => {
     const [imgUrl, setImgUrl] = React.useState('/static/backimg/backimg1.jpg');
@@ -14,6 +15,8 @@ const Index = () => {
         setImgUrl(`/static/backimg/backimg${getRandomInt(28)}.jpg`);
         setDocHeight(document.body.offsetHeight);
         setDocWidth(document.body.offsetWidth);
+        ReactGA.initialize('UA-165852651-1');
+        ReactGA.pageview(window.location.pathname + window.location.search);
     }, [])
     return (
         <Container>
