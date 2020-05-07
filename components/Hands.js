@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 export default ({ time, borderWidth = 10 }) => {
   return (
@@ -7,12 +7,12 @@ export default ({ time, borderWidth = 10 }) => {
       <SecondHand borderWidth={borderWidth} rotation={time.getSeconds() * 6 + "deg"} />
       <MinuteHand
         borderWidth={borderWidth}
-        rotation={(time.getMinutes() + time.getSeconds() / 60) * 6 + "deg"}
+        rotation={`${(time.getMinutes() + time.getSeconds() / 60) * 6}deg`}
       />
       <HourHand
         borderWidth={borderWidth}
         rotation={
-          ((time.getHours() % 12) + time.getMinutes() / 60) * 30 + "deg"
+          `${((time.getHours() % 12) + time.getMinutes() / 60) * 30  }deg`
         }
       />
     </div>
@@ -22,7 +22,7 @@ export default ({ time, borderWidth = 10 }) => {
 const SecondHand = styled.div`
   position: absolute;
   width: 1px;
-  height: ${ props => 150 - 10 - props.borderWidth}px;
+  height: ${props => 150 - 10 - props.borderWidth}px;
   background: #34cdab;
   border-radius: 100px;
   top: 10px;

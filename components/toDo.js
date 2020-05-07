@@ -102,7 +102,7 @@ const ListContainer = styled.ul`
             cursor: pointer;
         }
     }
-`
+`;
 
 const Header = styled.div`
     display: flex;
